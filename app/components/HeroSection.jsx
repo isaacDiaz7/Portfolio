@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-//import Image from somewhere
+import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
@@ -11,22 +11,7 @@ const HeroSection = () => {
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-600">Hello, I'm {""}</span>
             <br></br>
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed out once, initially
-                "Isaac",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "Full-Stack Software Engineer",
-                1000,
-                "Veteran",
-                1000,
-                "UI/UX Designer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            <TypeAnimation sequence={["Isaac", 1000, "Web Developer", 1000, "Veteran", 1000, "UI/UX Designer", 1000]} wrapper="span" speed={50} repeat={Infinity} />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lf:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div>
@@ -37,7 +22,9 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">{/* <Image src="" alt="" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" width={300} height={300}/> */}</div>
+          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+            <Image src="/images/hero-image.png" alt="" className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" width={400} height={400} />
+          </div>
         </div>
       </div>
     </section>
