@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-import { FaceSmileIcon } from "@heroicons/react/24/solid";
 
 const AnimatedNumbers = dynamic(
   () => {
     return import("react-animated-numbers");
   },
-  { ssr: FaceSmileIcon }
+  { ssr: false }
 );
 
 const achievementsList = [
