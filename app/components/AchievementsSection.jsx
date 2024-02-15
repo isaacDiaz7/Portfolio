@@ -17,7 +17,7 @@ const achievementsList = [
   },
   {
     metric: "Languages",
-    value: "2",
+    value: "3",
   },
   {
     metric: "Awards",
@@ -25,7 +25,8 @@ const achievementsList = [
   },
   {
     metric: "Years",
-    value: "1",
+    value: "3",
+    postfix: "+",
   },
 ];
 
@@ -35,7 +36,10 @@ const AchievementsSection = () => {
       <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-row sm:flex-row items-center justify-between max-[500px]:invisible">
         {achievementsList.map((achievement, index) => {
           return (
-            <div key={index} className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0">
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
+            >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
                 <AnimatedNumbers
